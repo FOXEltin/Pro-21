@@ -21,12 +21,13 @@ function setup() {
 	ground = new Ground(width/2,670,width,20)
 	leftside = new Ground(1100,600,20,120);
 	rigthside = new Ground(1350,600,20,120);
-var ball_options = {
+	var ball_options = {
 	restitution: 0.3,
 	density: 1.2,
 	isStatic: false
 	}
 	ball = Bodies.circle(260,100,40,ball_options);
+	World.add(world,ball);
 	Engine.run(engine);
   
 }
